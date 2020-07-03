@@ -5,8 +5,8 @@ import (
 
 	"log"
 
-	"github.com/gouthamve/redbull/pkg/redbull"
 	"github.com/jaegertracing/jaeger/plugin/storage/grpc"
+	"github.com/rubenvp8510/redbull/pkg/redbull"
 )
 
 //var logger = hclog.New(&hclog.LoggerOptions{

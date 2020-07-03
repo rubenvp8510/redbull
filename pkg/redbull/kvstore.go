@@ -24,7 +24,10 @@ type kvstore struct {
 }
 
 func newKVStore(dir string, retention time.Duration) (*kvstore, error) {
-	db, err := badger.Open(badger.DefaultOptions(dir))
+	options := badger.DefaultOptions
+	options.Dir = dir
+	options.ValueDir = dir
+	db, err := badger.Open(options)
 	if err != nil {
 		return nil, err
 	}
